@@ -1,4 +1,3 @@
-
 import React from "react";
 import { Layout } from "@/components/layout";
 import { motion } from "framer-motion";
@@ -45,7 +44,6 @@ const Contact = () => {
   return (
     <Layout activePage="Contact">
       <div className="container mx-auto px-4 py-8">
-        {/* Hero section */}
         <motion.section 
           className="text-center mb-16"
           initial={{ opacity: 0, y: 20 }}
@@ -59,9 +57,7 @@ const Contact = () => {
           </p>
         </motion.section>
 
-        {/* Main content */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
-          {/* Contact form */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             animate={{ opacity: 1, x: 0 }}
@@ -100,7 +96,6 @@ const Contact = () => {
             </div>
           </motion.div>
 
-          {/* Contact information */}
           <motion.div
             initial={{ opacity: 0, x: 30 }}
             animate={{ opacity: 1, x: 0 }}
@@ -154,7 +149,6 @@ const Contact = () => {
           </motion.div>
         </div>
 
-        {/* Social links */}
         <motion.section
           className="text-center"
           initial={{ opacity: 0, y: 20 }}
@@ -165,7 +159,7 @@ const Contact = () => {
           <div className="flex justify-center gap-4">
             {[
               { icon: <Twitter />, name: "Twitter", link: "#" },
-              { icon: <Discord />, name: "Discord", link: "#" },
+              { icon: <MessagesSquare />, name: "Discord", link: "#" },
               { icon: <Github />, name: "GitHub", link: "#" }
             ].map((social, index) => (
               <a
