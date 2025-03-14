@@ -39,11 +39,11 @@ export const Layout = ({ children, activePage = "Home" }: LayoutProps) => {
   };
 
   return (
-    <div className="min-h-screen bg-background text-foreground flex flex-col">
+    <div className="min-h-screen bg-background text-foreground flex flex-col scrollbar-none overflow-hidden">
       <NavBar items={navItems} />
       
       <motion.main
-        className="flex-1 pt-20 pb-24" 
+        className="flex-1 pt-20 pb-24 scrollbar-none overflow-y-auto" 
         initial="initial"
         animate="in"
         exit="out"
