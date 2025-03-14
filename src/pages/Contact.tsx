@@ -7,7 +7,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
-import { Mail, Phone, MapPin, MessageCircle, Github, Twitter, Discord } from "lucide-react";
+import { Mail, Phone, MapPin, MessageCircle, Github, Twitter, MessagesSquare } from "lucide-react";
 import { useToast } from "@/components/ui/use-toast";
 
 const Contact = () => {
@@ -29,7 +29,7 @@ const Contact = () => {
       link: "mailto:support@moddinghaven.com"
     },
     {
-      icon: <Discord className="h-5 w-5" />,
+      icon: <MessagesSquare className="h-5 w-5" />,
       title: "Discord",
       value: "Join our community",
       link: "#"
