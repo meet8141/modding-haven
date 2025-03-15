@@ -3,6 +3,7 @@ import React from "react";
 import { Home, Grid, Users, Mail } from "lucide-react";
 import { NavBar } from "@/components/ui/tubelight-navbar";
 import { motion } from "framer-motion";
+import { useIsMobile } from "@/hooks/use-mobile";
 
 interface LayoutProps {
   children: React.ReactNode;
@@ -17,6 +18,8 @@ const navItems = [
 ];
 
 export const Layout = ({ children, activePage = "Home" }: LayoutProps) => {
+  const isMobile = useIsMobile();
+  
   const pageVariants = {
     initial: {
       opacity: 0,
@@ -43,7 +46,7 @@ export const Layout = ({ children, activePage = "Home" }: LayoutProps) => {
       <NavBar items={navItems} />
       
       <motion.main
-        className="flex-1 pt-20 pb-24 scrollbar-none overflow-y-auto" 
+        className="flex-1 pt-16 pb-28 md:pt-20 md:pb-24 px-4 md:px-6 scrollbar-none overflow-y-auto" 
         initial="initial"
         animate="in"
         exit="out"
@@ -53,16 +56,16 @@ export const Layout = ({ children, activePage = "Home" }: LayoutProps) => {
         {children}
       </motion.main>
       
-      <footer className="py-6 border-t border-border">
+      <footer className="py-4 md:py-6 border-t border-border">
         <div className="container mx-auto px-4">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="mb-4 md:mb-0">
-              <p className="text-sm text-muted-foreground">© 2023 ModdingHaven. All rights reserved.</p>
+              <p className="text-xs md:text-sm text-muted-foreground">© 2023 ModdingHaven. All rights reserved.</p>
             </div>
-            <div className="flex space-x-4">
-              <a href="#" className="text-muted-foreground hover:text-primary transition-colors text-sm">Privacy Policy</a>
-              <a href="#" className="text-muted-foreground hover:text-primary transition-colors text-sm">Terms of Service</a>
-              <a href="#" className="text-muted-foreground hover:text-primary transition-colors text-sm">FAQ</a>
+            <div className="flex flex-wrap justify-center gap-4 md:gap-6">
+              <a href="#" className="text-muted-foreground hover:text-primary transition-colors text-xs md:text-sm">Privacy Policy</a>
+              <a href="#" className="text-muted-foreground hover:text-primary transition-colors text-xs md:text-sm">Terms of Service</a>
+              <a href="#" className="text-muted-foreground hover:text-primary transition-colors text-xs md:text-sm">FAQ</a>
             </div>
           </div>
         </div>
