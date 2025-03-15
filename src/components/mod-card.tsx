@@ -5,6 +5,7 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Download, Star } from "lucide-react";
+import { toast } from "@/hooks/use-toast";
 
 interface ModCardProps {
   title: string;
@@ -15,6 +16,7 @@ interface ModCardProps {
   rating: number;
   categories: string[];
   isFeatured?: boolean;
+  downloadUrl?: string;
 }
 
 export const ModCard = ({ 
@@ -25,8 +27,29 @@ export const ModCard = ({
   downloads, 
   rating, 
   categories,
-  isFeatured = false
+  isFeatured = false,
+  downloadUrl = "#"
 }: ModCardProps) => {
+  
+  const handleDownload = (e: React.MouseEvent<HTMLButtonElement>) => {
+    // If it's just a placeholder link, show toast instead of downloading
+    if (downloadUrl === "#") {
+      e.preventDefault();
+      toast({
+        title: "Download unavailable",
+        description: "This mod is currently unavailable for download.",
+        variant: "destructive",
+      });
+      return;
+    }
+    
+    // For real downloads, we could track this event
+    toast({
+      title: "Download started",
+      description: `${title} is now downloading...`,
+    });
+  };
+
   return (
     <motion.div
       whileHover={{ y: -5, transition: { duration: 0.2 } }}
@@ -69,8 +92,16 @@ export const ModCard = ({
             <Download className="inline h-3.5 w-3.5 mr-1" />
             {downloads.toLocaleString()}
           </div>
-          <Button variant="outline" size="sm" className="gap-1">
-            <Download className="h-3.5 w-3.5" /> Download
+          <Button 
+            variant="outline" 
+            size="sm" 
+            className="gap-1"
+            onClick={handleDownload}
+            asChild
+          >
+            <a href={downloadUrl} download>
+              <Download className="h-3.5 w-3.5" /> Download
+            </a>
           </Button>
         </CardFooter>
       </Card>

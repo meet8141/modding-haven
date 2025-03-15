@@ -11,7 +11,7 @@ import { Slider } from "@/components/ui/slider";
 import { Search, Filter, X } from "lucide-react";
 import { motion } from "framer-motion";
 
-// Mock data for mods
+// Mock data for mods with download URLs
 const mods = [
   {
     title: "Enhanced Graphics Overhaul",
@@ -21,6 +21,7 @@ const mods = [
     downloads: 52438,
     rating: 4.8,
     categories: ["Graphics", "Environment"],
+    downloadUrl: "https://example.com/downloads/enhanced-graphics-overhaul.zip",
   },
   {
     title: "Ultimate Weapon Pack",
@@ -30,6 +31,7 @@ const mods = [
     downloads: 34129,
     rating: 4.7,
     categories: ["Weapons", "Combat"],
+    downloadUrl: "https://example.com/downloads/ultimate-weapon-pack.zip",
   },
   {
     title: "New Frontier Expansion",
@@ -39,6 +41,7 @@ const mods = [
     downloads: 28753,
     rating: 4.9,
     categories: ["Expansion", "Quests"],
+    downloadUrl: "https://example.com/downloads/new-frontier-expansion.zip",
   },
   {
     title: "Performance Optimizer",
@@ -48,6 +51,7 @@ const mods = [
     downloads: 76532,
     rating: 4.6,
     categories: ["Performance", "Utility"],
+    downloadUrl: "https://example.com/downloads/performance-optimizer.zip",
   },
   {
     title: "Character Enhancement Suite",
@@ -57,6 +61,7 @@ const mods = [
     downloads: 23451,
     rating: 4.5,
     categories: ["Characters", "Customization"],
+    downloadUrl: "https://example.com/downloads/character-enhancement-suite.zip",
   },
   {
     title: "Weather Phenomena",
@@ -66,6 +71,7 @@ const mods = [
     downloads: 18932,
     rating: 4.7,
     categories: ["Weather", "Environment"],
+    downloadUrl: "https://example.com/downloads/weather-phenomena.zip",
   },
   {
     title: "Immersive Sound Overhaul",
@@ -75,6 +81,7 @@ const mods = [
     downloads: 31254,
     rating: 4.8,
     categories: ["Audio", "Immersion"],
+    downloadUrl: "https://example.com/downloads/immersive-sound-overhaul.zip",
   },
   {
     title: "Advanced AI Behaviors",
@@ -84,6 +91,7 @@ const mods = [
     downloads: 15487,
     rating: 4.6,
     categories: ["AI", "NPCs"],
+    downloadUrl: "https://example.com/downloads/advanced-ai-behaviors.zip",
   },
   {
     title: "New Gameplay Mechanics",
@@ -93,6 +101,7 @@ const mods = [
     downloads: 28753,
     rating: 4.5,
     categories: ["Gameplay", "Mechanics"],
+    downloadUrl: "https://example.com/downloads/new-gameplay-mechanics.zip",
   },
 ];
 
@@ -279,7 +288,30 @@ const Mods = () => {
                             <div className="text-sm text-muted-foreground">
                               by {mod.author} • {mod.downloads.toLocaleString()} downloads
                             </div>
-                            <Button variant="outline" size="sm">Download</Button>
+                            <Button 
+                              variant="outline" 
+                              size="sm"
+                              asChild
+                              onClick={(e) => {
+                                if (mod.downloadUrl === "#") {
+                                  e.preventDefault();
+                                  toast({
+                                    title: "Download unavailable",
+                                    description: "This mod is currently unavailable for download.",
+                                    variant: "destructive",
+                                  });
+                                } else {
+                                  toast({
+                                    title: "Download started",
+                                    description: `${mod.title} is now downloading...`,
+                                  });
+                                }
+                              }}
+                            >
+                              <a href={mod.downloadUrl || "#"} download>
+                                <Download className="h-3.5 w-3.5 mr-1" /> Download
+                              </a>
+                            </Button>
                           </div>
                         </div>
                       </div>
