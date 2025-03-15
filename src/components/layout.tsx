@@ -46,7 +46,7 @@ export const Layout = ({ children, activePage = "Home" }: LayoutProps) => {
       <NavBar items={navItems} />
       
       <motion.main
-        className="flex-1 pt-16 pb-28 md:pt-20 md:pb-24 px-4 md:px-6 scrollbar-none overflow-y-auto" 
+        className={`flex-1 ${isMobile ? "pt-16" : "pt-16"} pb-28 md:pt-20 md:pb-24 px-4 md:px-6 scrollbar-none overflow-y-auto`}
         initial="initial"
         animate="in"
         exit="out"

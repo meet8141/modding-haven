@@ -42,13 +42,13 @@ export function NavBar({ items, className }: NavBarProps) {
       className={cn(
         "fixed z-50 left-1/2 -translate-x-1/2 transition-all duration-300",
         isMobile 
-          ? "bottom-4 mb-0 w-[calc(100%-2rem)] max-w-md" 
+          ? "top-0 w-full mb-0" 
           : "bottom-auto top-6 w-auto",
         className,
       )}
     >
       <motion.div 
-        initial={{ opacity: 0, y: isMobile ? 20 : -20 }}
+        initial={{ opacity: 0, y: isMobile ? -20 : -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ 
           duration: 0.5, 
@@ -56,8 +56,8 @@ export function NavBar({ items, className }: NavBarProps) {
           delay: 0.2 
         }}
         className={cn(
-          "flex items-center justify-center gap-1 md:gap-3 bg-background/50 backdrop-blur-lg py-1 px-1 rounded-full shadow-lg border border-border",
-          isMobile ? "w-full" : ""
+          "flex items-center justify-center gap-1 md:gap-3 bg-background/80 backdrop-blur-lg py-1 px-1 rounded-full shadow-lg border border-border",
+          isMobile ? "mx-auto w-[95%] my-2 rounded-xl" : "w-auto"
         )}
       >
         {items.map((item) => {
@@ -108,8 +108,8 @@ export function NavBar({ items, className }: NavBarProps) {
                   }}
                 >
                   <div className={cn(
-                    "absolute left-1/2 -translate-x-1/2 w-8 h-1 bg-primary rounded-t-full",
-                    isMobile ? "-top-1 opacity-70" : "-top-2"
+                    "absolute left-1/2 -translate-x-1/2 w-8 h-1 bg-primary rounded-full",
+                    isMobile ? "top-auto bottom-0 opacity-70" : "-top-2"
                   )}>
                     <motion.div 
                       className="absolute w-12 h-6 bg-primary/20 rounded-full blur-md -top-2 -left-2"
