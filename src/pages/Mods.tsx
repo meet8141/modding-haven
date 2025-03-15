@@ -1,4 +1,3 @@
-
 import React, { useState } from "react";
 import { Layout } from "@/components/layout";
 import { ModCard } from "@/components/mod-card";
@@ -8,8 +7,9 @@ import { Button } from "@/components/ui/button";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Slider } from "@/components/ui/slider";
-import { Search, Filter, X } from "lucide-react";
+import { Search, Filter, X, Download } from "lucide-react";
 import { motion } from "framer-motion";
+import { toast } from "@/hooks/use-toast";
 
 // Mock data for mods with download URLs
 const mods = [
