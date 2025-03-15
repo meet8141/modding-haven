@@ -1,18 +1,248 @@
+
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>modding-haven</title>
-    <meta name="description" content="Lovable Generated Project" />
-    <meta name="author" content="Lovable" />
-    <meta property="og:image" content="/og-image.png" />
-  </head>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ModdingHaven - Game Modification Hub</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Lexend:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <script src="https://cdn.gpteng.co/gptengineer.js" type="module"></script>
+</head>
+<body>
+  <div class="site-container">
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+      <div class="navbar-container">
+        <div class="logo">ModdingHaven</div>
+        <div class="nav-links" id="navLinks">
+          <a href="index.html" class="nav-link active">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+            Home
+          </a>
+          <a href="mods.html" class="nav-link">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg>
+            Mods
+          </a>
+          <a href="about.html" class="nav-link">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M22 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+            About
+          </a>
+          <a href="contact.html" class="nav-link">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"></rect><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></svg>
+            Contact
+          </a>
+        </div>
+        <div class="mobile-menu-toggle" id="menuToggle">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </nav>
 
-  <body>
-    <div id="root"></div>
-    <!-- IMPORTANT: DO NOT REMOVE THIS SCRIPT TAG OR THIS VERY COMMENT! -->
-    <script src="https://cdn.gpteng.co/gptengineer.js" type="module"></script>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
+    <!-- Main Content -->
+    <main>
+      <!-- Hero Section -->
+      <section class="hero">
+        <div class="hero-glow">
+          <div class="main-glow"></div>
+          <div class="lamp-effect"></div>
+          <div class="top-line"></div>
+          <div class="left-gradient"></div>
+          <div class="right-gradient"></div>
+        </div>
+        <div class="hero-content">
+          <h1>ModdingHaven</h1>
+          <p>Your ultimate destination for game modifications, tools, and resources</p>
+          <div class="hero-actions">
+            <a href="mods.html" class="btn btn-primary">Browse Mods</a>
+            <a href="about.html" class="btn btn-outline">Join Community</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Featured Mods Section -->
+      <section class="featured-mods">
+        <div class="container">
+          <div class="section-header">
+            <h2>Featured Mods</h2>
+            <p>Discover the most popular and highest-rated modifications from our talented community</p>
+          </div>
+          
+          <div class="mod-grid">
+            <!-- Mod Card 1 -->
+            <div class="mod-card featured">
+              <div class="mod-image">
+                <img src="https://images.unsplash.com/photo-1542751371-adc38448a05e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Enhanced Graphics Overhaul">
+              </div>
+              <div class="mod-header">
+                <div class="mod-categories">
+                  <span class="badge">Graphics</span>
+                  <span class="badge">Environment</span>
+                </div>
+                <h3>Enhanced Graphics Overhaul</h3>
+                <div class="mod-meta">
+                  <span>by PixelPerfect</span>
+                  <div class="rating">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                    <span>4.8</span>
+                  </div>
+                </div>
+              </div>
+              <div class="mod-content">
+                <p>A comprehensive graphics mod that transforms the game's visuals with realistic lighting, textures, and weather effects.</p>
+              </div>
+              <div class="mod-footer">
+                <div class="download-count">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+                  52,438
+                </div>
+                <a href="#" class="btn btn-small btn-outline download-btn" data-mod="Enhanced Graphics Overhaul">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+                  Download
+                </a>
+              </div>
+            </div>
+
+            <!-- Mod Card 2 -->
+            <div class="mod-card featured">
+              <div class="mod-image">
+                <img src="https://images.unsplash.com/photo-1552820728-8b83bb6b773f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Ultimate Weapon Pack">
+              </div>
+              <div class="mod-header">
+                <div class="mod-categories">
+                  <span class="badge">Weapons</span>
+                  <span class="badge">Combat</span>
+                </div>
+                <h3>Ultimate Weapon Pack</h3>
+                <div class="mod-meta">
+                  <span>by ArsenalCreator</span>
+                  <div class="rating">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                    <span>4.7</span>
+                  </div>
+                </div>
+              </div>
+              <div class="mod-content">
+                <p>Introduces over 100 new weapons with custom sounds, animations, and fully balanced gameplay integration.</p>
+              </div>
+              <div class="mod-footer">
+                <div class="download-count">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+                  34,129
+                </div>
+                <a href="#" class="btn btn-small btn-outline download-btn" data-mod="Ultimate Weapon Pack">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+                  Download
+                </a>
+              </div>
+            </div>
+
+            <!-- Mod Card 3 -->
+            <div class="mod-card featured">
+              <div class="mod-image">
+                <img src="https://images.unsplash.com/photo-1536825211030-094de935f680?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="New Frontier Expansion">
+              </div>
+              <div class="mod-header">
+                <div class="mod-categories">
+                  <span class="badge">Expansion</span>
+                  <span class="badge">Quests</span>
+                </div>
+                <h3>New Frontier Expansion</h3>
+                <div class="mod-meta">
+                  <span>by QuestMaster</span>
+                  <div class="rating">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                    <span>4.9</span>
+                  </div>
+                </div>
+              </div>
+              <div class="mod-content">
+                <p>Adds a massive new region with unique quests, NPCs, and storylines to explore.</p>
+              </div>
+              <div class="mod-footer">
+                <div class="download-count">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+                  28,753
+                </div>
+                <a href="#" class="btn btn-small btn-outline download-btn" data-mod="New Frontier Expansion">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+                  Download
+                </a>
+              </div>
+            </div>
+          </div>
+          
+          <div class="view-all-container">
+            <a href="mods.html" class="btn btn-outline btn-large">
+              View All Mods
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Features Section -->
+      <section class="features">
+        <div class="container">
+          <div class="section-header">
+            <h2>Why Choose ModdingHaven</h2>
+            <p>We're more than just a mod repository - we're a community of passionate gamers and creators</p>
+          </div>
+          
+          <div class="features-grid">
+            <!-- Feature 1 -->
+            <div class="feature-card">
+              <div class="feature-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
+              </div>
+              <h3>Easy Installation</h3>
+              <p>One-click mod installation with automatic conflict resolution and compatibility checks.</p>
+            </div>
+            
+            <!-- Feature 2 -->
+            <div class="feature-card">
+              <div class="feature-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+              </div>
+              <h3>Secure Downloads</h3>
+              <p>All mods are scanned and verified for safety before being made available.</p>
+            </div>
+            
+            <!-- Feature 3 -->
+            <div class="feature-card">
+              <div class="feature-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+              </div>
+              <h3>Active Community</h3>
+              <p>Join thousands of modders sharing creations, tips, and tutorials.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-info">
+            <p>&copy; 2023 ModdingHaven. All rights reserved.</p>
+          </div>
+          <div class="footer-links">
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Service</a>
+            <a href="#">FAQ</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Toast Notification Container -->
+    <div id="toast-container"></div>
+  </div>
+
+  <script src="scripts.js"></script>
+</body>
 </html>
